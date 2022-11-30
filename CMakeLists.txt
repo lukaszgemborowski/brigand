@@ -251,3 +251,20 @@ option(BUILD_EXAMPLES "Build examples" ${BUILD_TESTING})
 if(BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
+
+add_library(
+    brigand_brigand
+    INTERFACE
+)
+
+add_library(
+    brigand::brigand
+    ALIAS
+    brigand_brigand
+)
+
+target_include_directories(
+    brigand_brigand
+    INTERFACE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
