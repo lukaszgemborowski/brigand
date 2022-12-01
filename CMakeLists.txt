@@ -244,8 +244,8 @@ install(FILES ${CMAKE_BINARY_DIR}/libbrigand.pc
     DESTINATION lib/pkgconfig
 )
 
-include(SetupDoxygen)
-include(SetupStandardese)
+include(CMake/SetupDoxygen.cake)
+include(Cmake/SetupStandardese.cmake)
 
 option(BUILD_EXAMPLES "Build examples" ${BUILD_TESTING})
 if(BUILD_EXAMPLES)
